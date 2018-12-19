@@ -1,0 +1,37 @@
+{
+  "name": "developersconnect",
+  "version": "1.0.0",
+  "description": "An App that connects developers accross the world",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/omerenma/developersconnect.git"
+  },
+  "keywords": [
+    "Developers",
+    "programmers"
+  ],
+  "author": "Onyebuchi Kingsley Omerenma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omerenma/developersconnect/issues"
+  },
+  "homepage": "https://github.com/omerenma/developersconnect#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
