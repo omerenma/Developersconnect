@@ -1,5 +1,5 @@
  module.exports ={
-  mongoURI:'mongodb://kingsly1984:kingsly8@ds225902.mlab.com:25902/developersconnect',
+  mongoURI:'mongodb://kingsly8:kingsly8@ds153824.mlab.com:53824/websoftconnect',
   secretOrkey:'secret'
 
 }
