@@ -4,6 +4,8 @@ import authReducer from './authReducer';
 import errorReducer from './errorReducer';
 import profileReducer from './profileReducer';
 import postReducer from './postReducers';
+
+
 export default combineReducers({
   auth:authReducer,
   errors:errorReducer,

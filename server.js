@@ -4,7 +4,7 @@ var app = express();
 const path = require('path');
 const bodyPaser = require('body-parser');
 const mongoose = require('mongoose');
-const passport = require('passport')
+const passport = require('passport');
 const jwt = require('jsonwebtoken');
 module.exports = jwt;
 // Require route files
@@ -21,9 +21,10 @@ app.use(bodyPaser.json());
 //const uri = 'mongodb://kingsly8:kingsly8@ds225902.mlab.com:25902/developersconnect'
 const db = require('./config/keys').mongoURI;
 //connect to mongodb 
-mongoose.connect(db)
+mongoose.connect(db, { useNewUrlParser: true })
     .then(() => console.log('MongoDb connect'))
     .catch(err => console.log(err));
+    
 // Passport middleware
 app.use(passport.initialize());
 // Passport config

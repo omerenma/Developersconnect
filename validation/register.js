@@ -14,9 +14,12 @@ module.exports = function validateRegisterInput(data) {
   }
 
   if (validator.isEmpty(data.name)) {
-    errors.name = 'Name field is required';
+    errors.name = 'Name field is required'; 
   }
 
+  if (validator.isUppercase(data.name)) {
+    errors.name = 'Name field must be in uppercase'; 
+  }
   if (validator.isEmpty(data.email)) {
     errors.email = 'Email field is required';
   }
@@ -33,6 +36,9 @@ module.exports = function validateRegisterInput(data) {
     errors.password = 'Password must be at least 6 characters';
   }
 
+  // if (validator.isAlphanumeric(data.password)) {
+  //   errors.password = 'Password must contain at least a number';
+  // }
   if (validator.isEmpty(data.password2)) {
     errors.password2 = 'Confirm Password field is required';
   } else {

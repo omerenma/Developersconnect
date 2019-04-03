@@ -9,6 +9,7 @@ import TextFieldGroup from '../common/TextFieldGroup';
 
 
  class Register extends Component {
+   // Register input state
   constructor(){
     super();
     this.state = {
@@ -52,6 +53,8 @@ import TextFieldGroup from '../common/TextFieldGroup';
   }
 
   render() {
+    // Use destructuring to pull out errors from state
+    // const errors = this.state.errors
     const {errors} = this.state;
     
     return (

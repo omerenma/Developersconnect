@@ -25,7 +25,7 @@ status:{
   required:true
 },
 skills:{
-  type:[String],
+  type:[String], // This contains an array of list
 required:true
 },
 bio:{

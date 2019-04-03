@@ -19,6 +19,10 @@ module.exports = function validateLoginInput(data) {
     errors.password = 'Password field is required';
   }
 
+  // if (Validator.isAlphanumeric(data.password)) {
+  //   errors.password = 'Password field must contain atlest a number';
+  // }
+
   return {
     errors,
     isValid: isEmpty(errors)

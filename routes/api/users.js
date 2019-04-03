@@ -12,6 +12,7 @@ const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 // Load User model
 const User = require('../../models/Users');
+const Login = require('../../models/Login');
 router.get('/test', (rq, res) => res.json({msg:'Users worked'}))
 
 //@route GET api/users/test
@@ -93,12 +94,13 @@ router.post('/login', (req, res) => {
             if(isMatch){
               // User Matched
               const payload = {id:user.id, name:user.name, avatar:user.avatar} // Create JWT payload
+          
               // Sign Token
-              jwt.sign(payload, keys.secretOrkey, {expiresIn:3600}, 
+              jwt.sign(payload, keys.secretOrkey, {expiresIn:3600},
                 (err, token) =>{
                 res.json({
                   success:true,
-                  token:'Bearer '+ token
+                  token: 'Bearer ' + token
                   //`Bear er ${token}` 
                 });
 
@@ -117,10 +119,10 @@ router.post('/login', (req, res) => {
 //@access Private
 
 router.get('/current', passport.authenticate('jwt', {session:false}), (req, res) =>{
-  res.json({
-    id:req.user.id,
-    name:req.user.name,
-    email:req.user.email
+  res.json({ 
+      id:req.user.id,
+     name:req.user.name,
+      email:req.user.email
   });
 })
 
