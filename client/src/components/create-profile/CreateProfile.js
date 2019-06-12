@@ -7,7 +7,7 @@ import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import { createProfile } from '../../actions/profileActions';
-import { set } from 'mongoose';
+
 
 class CreateProfile extends Component {
   constructor(props) {

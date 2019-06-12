@@ -29,8 +29,8 @@ import {clearCurrentProfile} from '../../actions/profileActions'
         </li>
         <li className="nav-item">
           <a
-            href=""
-            onClick={this.onLogoutClick.bind(this)}
+            href="#"
+            onClick={this.onLogoutClick.bind()}
             className="nav-link"
           >
             <img
