@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: 'mongodb://localhost:27017/devconnector',
+  mongoURI: 'mongodb://kingsly8:kingsly7@ds019816.mlab.com:19816/websoft',
   secretOrKey: 'secret'
 };
