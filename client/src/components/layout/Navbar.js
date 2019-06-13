@@ -28,11 +28,9 @@ import {clearCurrentProfile} from '../../actions/profileActions'
           </Link>
         </li>
         <li className="nav-item">
-          <a
-            href="#"
-            onClick={this.onLogoutClick.bind()}
-            className="nav-link"
-          >
+          <button onClick={this.onLogoutClick.bind(this) } >
+          className="navbar" 
+          Perform action
             <img
               className="rounded-circle"
               src={user.avatar}
@@ -41,7 +39,7 @@ import {clearCurrentProfile} from '../../actions/profileActions'
               title="You must have a Gravatar connected to your email to display an image"
             />{' '}
             Logout
-          </a>
+          </button>
         </li>
       </ul>
     );
